@@ -17,9 +17,9 @@ export default class App extends Component {
         <NavBar />
         <Routes basename="/jessie-portfolio">
           <Route path="/jessie-portfolio/" element={<About />} />
-          <Route path="/shop" element={<Home />} />
-          <Route path="/artgallery" element={<ArtGallery />} />
-          <Route path="/misc" element={<Misc />} />
+          <Route path="/jessie-portfolio/shop" element={<Home />} />
+          <Route path="/jessie-portfolio/artgallery" element={<ArtGallery />} />
+          <Route path="/jessie-portfolio/misc" element={<Misc />} />
           {/* <Route path="/contact" element={<Contact />} />  */}
         </Routes>
       </div>
