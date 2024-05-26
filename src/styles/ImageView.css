@@ -1,0 +1,47 @@
+.view-img {
+    width: 35%;
+}
+.img-row {
+    /* border:2px solid blue; */
+    margin: 0 1em 0 1em;
+    display:flex;
+    justify-content: space-between;
+}
+.sq-img {
+    width: 35%;
+    height: 35%;
+}
+.pip-gap {
+    /* border: 2px solid orange; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    color: mediumpurple;
+    /* height: 100%; */
+}
+.pip-gap-top {
+    /* border: 2px solid purple; */
+    margin-top: 3em;
+}
+.pip-gap-bottom {
+    /* border: 2px solid brown; */
+    margin-bottom: 3em;
+}
+.arrow-left, .arrow-right {
+    width: 25%;
+}
+.arrow-left {
+    
+}
+.arrow-right {
+    
+}
+.line {
+    border:2px solid black;
+}
+.click-message {
+    color: black;
+    font-size: 10px;
+}

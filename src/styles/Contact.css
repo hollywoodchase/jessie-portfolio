@@ -1,0 +1,15 @@
+
+.contact-page {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+.message-textarea {
+    height: 5em;
+}
+.submit-btn {
+    background-color: #cc5500;
+    color: #ece2ad;
+    font-family: cookie-supply;
+}

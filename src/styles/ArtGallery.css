@@ -1,0 +1,23 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+.artgallery-page {
+    text-align: center;
+    margin-top: 1em;
+  }
+  .imagegrid-title {
+    background: #ece2ad;
+    font-family: cookie-supply;
+    color: #cc5500;
+    padding: .5em;
+    border-radius: 10px;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+  }
+  .img-row > img{
+    width: 45%;
+  }
+  .img-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 1em 0 1em 0;
+  }

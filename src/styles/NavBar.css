@@ -1,0 +1,71 @@
+@font-face {
+  font-family: super-funky;
+  src: url("../fonts/SuperFunky.ttf");
+}
+.resp-menu {
+  /* margin-top: 1em; */
+  font-family: super-funky;
+  /* border-bottom: 2px solid black; */
+  /* background: #fbfae3; */
+  
+}
+.nav-row {
+  /* border-bottom: 2px solid black; */
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  background: #fefde6;
+  max-height: 4em;
+  /* padding: 1em 3em 1em 3em; */
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+.nav-link {
+  animation: none;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  color: #c884cd;
+  min-width: 15vw;
+}
+
+.nav-link:hover {
+  display: inline-block;
+  animation: wiggle 1s infinite;
+  color: orange;
+  text-shadow: 1px 1px 2px black;
+}
+.dropdown-wrapper {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.dropdown {
+  /* border: 2px solid blue; */
+  position: relative;
+  background: #cc5500;
+  border: 2px solid #ece2ad;
+  border-radius: 10px;
+}
+.link-col {
+  display: flex;
+  flex-direction: column;
+}

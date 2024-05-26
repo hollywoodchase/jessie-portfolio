@@ -1,0 +1,133 @@
+.home-page {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  /* border: 2px solid red; */
+  /* background-repeat: no-repeat; */
+  color: #cc5500;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 3em;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+PhotoView {
+  width: 50vw;
+}
+.home-row {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 3em;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+.bio-text {
+  display: flex;
+  align-items: center;
+}
+.bio-col {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  background: #ece2ad;
+  /* background-image:url('../images/light-background.png'); */
+  border-radius: 50px;
+  margin: 0 3em 0 3em;
+  font-family: cookie-supply;
+  padding: 2em;
+  width: 30%;
+}
+@font-face {
+  font-family: cookie-supply;
+  src: url("../fonts/Cookie\ Supply.otf");
+}
+.about-img {
+  /* border: 2px solid gold; */
+  animation: growImage 3s forwards;
+  /* width: 25%; */
+  margin: 3em;
+  border-radius: 25px;
+}
+@keyframes growImage {
+  from {
+    width: 25%; /* Initial width */
+    /* height: 0%; */
+  }
+  to {
+    width: 25em; /* Final width */
+    /* height: 50%; */
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0; 
+  }
+  to {
+    opacity: 1; /* Final width */
+    /* height: 50%; */
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-col {
+  width: 50%;
+}
+.image-viewer {
+  /* border: 2px solid red; */
+  margin: 0 2em 0 2em;
+  width: 50%;
+  animation: fadeIn 5s forwards;
+}
+.contact-form {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  background: #ece2ad;
+  font-family: cookie-supply;
+  color: #cc5500;
+  margin: 0 0.5em 0 0.5em;
+  border-radius: 10px;
+  padding: 2em;
+}
+.form-input {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+.contact-form-wrapper {
+  /* border: 2px solid pink; */
+  width: 45%
+}
+.inst-title {
+  display: flex;
+  justify-content: center;
+}
+.submit-btn {
+  background: #cc5500;
+  border: 2px solid #ece2ad;
+  border-radius: 10px;
+  padding: 1em;
+  color: #c884cd;
+  font-family: cookie-supply;
+  font-size: 1em;
+}
+.submit-btn:hover {
+  background: #ece2ad;
+  border: 2px solid #cc5500;
+}
+.text-input {
+  padding: 0.5em;
+  border: 2px solid #c884cd;
+  border-radius: 10px;
+}
+.instr-text {
+  font-family: cookie-supply;
+}
