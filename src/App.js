@@ -15,11 +15,11 @@ export default class App extends Component {
     return (
       <div className="app-wrapper">
         <NavBar />
-        <Routes>
-          <Route path="/jessie-portfolio/" element={<About />} />
-          <Route path="/jessie-portfolio/shop" element={<Home />} />
-          <Route path="/jessie-portfolio/artgallery" element={<ArtGallery />} />
-          <Route path="/jessie-portfolio/misc" element={<Misc />} />
+        <Routes basename="/jessie-portfolio">
+          <Route path="/" element={<About />} />
+          <Route path="/shop" element={<Home />} />
+          <Route path="/artgallery" element={<ArtGallery />} />
+          <Route path="/misc" element={<Misc />} />
           {/* <Route path="/contact" element={<Contact />} />  */}
         </Routes>
       </div>
