@@ -1,16 +1,38 @@
 {
   "files": {
-    "main.css": "/jessie-test/static/css/main.f855e6bc.css",
-    "main.js": "/jessie-test/static/js/main.dbaddc0d.js",
+    "main.css": "/jessie-test/static/css/main.2d77ee24.css",
+    "main.js": "/jessie-test/static/js/main.55bf9ad8.js",
     "static/js/453.b7b64100.chunk.js": "/jessie-test/static/js/453.b7b64100.chunk.js",
-    "static/media/logo.svg": "/jessie-test/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/real-sequoia.jpg": "/jessie-test/static/media/real-sequoia.0c5ed74992ca94df5271.jpg",
+    "static/media/Rumi.JPG": "/jessie-test/static/media/Rumi.f4e6a69eb4eaa82c138c.JPG",
+    "static/media/NorthernLights.JPG": "/jessie-test/static/media/NorthernLights.6ff15ce667ca72048b4a.JPG",
+    "static/media/Pip-1.JPG": "/jessie-test/static/media/Pip-1.f6185ef1f3cbfed57e0e.JPG",
+    "static/media/Pip.jpg": "/jessie-test/static/media/Pip.43d5bad8ed9f3ef40ba7.jpg",
+    "static/media/Sequoia.jpg": "/jessie-test/static/media/Sequoia.8ab5d7598935daa08aae.jpg",
+    "static/media/TwoDogs.JPEG": "/jessie-test/static/media/TwoDogs.4674608669d1a0b5f47c.JPEG",
+    "static/media/real-rumi.jpeg": "/jessie-test/static/media/real-rumi.136a7073781db7acedac.jpeg",
+    "static/media/LoveBirds.jpg": "/jessie-test/static/media/LoveBirds.a2fb9127428b2634853a.jpg",
+    "static/media/Daschund.JPEG": "/jessie-test/static/media/Daschund.96059a25a5a510720a2c.JPEG",
+    "static/media/Gladys.jpeg": "/jessie-test/static/media/Gladys.8234528bc405244766d6.jpeg",
+    "static/media/Hearts.JPEG": "/jessie-test/static/media/Hearts.1d1e1a0cd16507f693b1.JPEG",
+    "static/media/SoupPattern.jpg": "/jessie-test/static/media/SoupPattern.ca8ba5592b66fcc4f75f.jpg",
+    "static/media/DiscoNap.jpg": "/jessie-test/static/media/DiscoNap.b5f31590b74e28e3f0b5.jpg",
+    "static/media/Tovie.JPG": "/jessie-test/static/media/Tovie.c019a907fa8ead9c1992.JPG",
+    "static/media/Cats2.jpeg": "/jessie-test/static/media/Cats2.68a4fc7e545b0eeda348.jpeg",
+    "static/media/downward-kitty.jpeg": "/jessie-test/static/media/downward-kitty.f7a3ebbf12da2be16f7a.jpeg",
+    "static/media/River.JPEG": "/jessie-test/static/media/River.3a08f592b420fc70afb0.JPEG",
+    "static/media/real-pip.jpg": "/jessie-test/static/media/real-pip.968353ab050a697223e7.jpg",
+    "static/media/SuperFunky.ttf": "/jessie-test/static/media/SuperFunky.9367084bb0ab79d1947f.ttf",
+    "static/media/AboutPic.jpg": "/jessie-test/static/media/AboutPic.4e7583ba37ae773580b9.jpg",
+    "static/media/Cookie Supply.otf": "/jessie-test/static/media/Cookie Supply.b32875c4316481b51d83.otf",
+    "static/media/paper.jpeg": "/jessie-test/static/media/paper.503f1f7a29767324dee9.jpeg",
     "index.html": "/jessie-test/index.html",
-    "main.f855e6bc.css.map": "/jessie-test/static/css/main.f855e6bc.css.map",
-    "main.dbaddc0d.js.map": "/jessie-test/static/js/main.dbaddc0d.js.map",
+    "main.2d77ee24.css.map": "/jessie-test/static/css/main.2d77ee24.css.map",
+    "main.55bf9ad8.js.map": "/jessie-test/static/js/main.55bf9ad8.js.map",
     "453.b7b64100.chunk.js.map": "/jessie-test/static/js/453.b7b64100.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.dbaddc0d.js"
+    "static/css/main.2d77ee24.css",
+    "static/js/main.55bf9ad8.js"
   ]
 }
