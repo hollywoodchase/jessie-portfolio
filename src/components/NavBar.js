@@ -1,4 +1,4 @@
-ssimport React, { useState } from "react";
+import React, { useState } from "react";
 import "../styles/NavBar.css";
 import { Link } from "react-router-dom";
 // import ResponsiveMenu from "react-responsive-navbar";
