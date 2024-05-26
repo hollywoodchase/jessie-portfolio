@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+ssimport React, { useState } from "react";
 import "../styles/NavBar.css";
 import { Link } from "react-router-dom";
 // import ResponsiveMenu from "react-responsive-navbar";
@@ -16,11 +16,11 @@ const BasicDropdown = ({ showDropdown, setShowDropdown }) => {
           <Link
             onClick={setShowDropdown}
             class="dropdown nav-link"
-            to="/artgallery"
+            to="/jessie-portfolio/artgallery"
           >
             Pet Portraits
           </Link>
-          <Link onClick={setShowDropdown} class="dropdown nav-link" to="/misc">
+          <Link onClick={setShowDropdown} class="dropdown nav-link" to="/jessie-portfolio/misc">
             Miscellaneous
           </Link>
         </div>
@@ -36,10 +36,10 @@ const NavBar = () => {
   return (
     <div className="resp-menu">
       <div className="nav-row">
-        <Link className="nav-link" to="/" onClick={closeDropdown}>
+        <Link className="nav-link" to="/jessie-portfolio/" onClick={closeDropdown}>
           Home
         </Link>
-        <Link className="nav-link" to="/shop" onClick={closeDropdown}>
+        <Link className="nav-link" to="/jessie-portfolio/shop" onClick={closeDropdown}>
           Shop
         </Link>
 
@@ -47,7 +47,6 @@ const NavBar = () => {
           showDropdown={showDropdown}
           setShowDropdown={() => setShowDropdown(!showDropdown)}
         />
-        {/* <Link className="nav-link" to="/contact">Contact</Link> */}
       </div>
     </div>
   );
