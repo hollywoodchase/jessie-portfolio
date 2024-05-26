@@ -16,10 +16,10 @@ export default class App extends Component {
       <div className="app-wrapper">
         <NavBar />
         <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/shop" element={<Home />} />
-          <Route path="/artgallery" element={<ArtGallery />} />
-          <Route path="/misc" element={<Misc />} />
+          <Route path="/jessie-test/" element={<About />} />
+          <Route path="/jessie-test/shop" element={<Home />} />
+          <Route path="/jessie-test/artgallery" element={<ArtGallery />} />
+          <Route path="/jessie-test/misc" element={<Misc />} />
           {/* <Route path="/contact" element={<Contact />} />  */}
         </Routes>
       </div>
