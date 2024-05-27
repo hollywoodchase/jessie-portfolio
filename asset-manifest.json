@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/jessie-portfolio/static/css/main.eaf60b52.css",
-    "main.js": "/jessie-portfolio/static/js/main.d4511ddc.js",
+    "main.css": "/jessie-portfolio/static/css/main.b8c91d40.css",
+    "main.js": "/jessie-portfolio/static/js/main.6f3fb20d.js",
     "static/js/453.b7b64100.chunk.js": "/jessie-portfolio/static/js/453.b7b64100.chunk.js",
     "static/media/real-sequoia.jpg": "/jessie-portfolio/static/media/real-sequoia.0c5ed74992ca94df5271.jpg",
+    "static/media/combo-rumi.jpeg": "/jessie-portfolio/static/media/combo-rumi.91c3f087d1c6e782caf6.jpeg",
     "static/media/Rumi.JPG": "/jessie-portfolio/static/media/Rumi.f4e6a69eb4eaa82c138c.JPG",
     "static/media/NorthernLights.JPG": "/jessie-portfolio/static/media/NorthernLights.6ff15ce667ca72048b4a.JPG",
+    "static/media/combo-pip.jpeg": "/jessie-portfolio/static/media/combo-pip.6c70340166cbc90f576e.jpeg",
     "static/media/Pip-1.JPG": "/jessie-portfolio/static/media/Pip-1.f6185ef1f3cbfed57e0e.JPG",
+    "static/media/combo-twodogs.jpeg": "/jessie-portfolio/static/media/combo-twodogs.b41c329bc62d2d8004e9.jpeg",
     "static/media/Pip.jpg": "/jessie-portfolio/static/media/Pip.43d5bad8ed9f3ef40ba7.jpg",
     "static/media/Sequoia.jpg": "/jessie-portfolio/static/media/Sequoia.8ab5d7598935daa08aae.jpg",
-    "static/media/TwoDogs.JPEG": "/jessie-portfolio/static/media/TwoDogs.4674608669d1a0b5f47c.JPEG",
+    "static/media/TwoDogs.JPEG": "/jessie-portfolio/static/media/TwoDogs.78d020adb74201f8210a.JPEG",
+    "static/media/combo-downward.jpeg": "/jessie-portfolio/static/media/combo-downward.f6266e82140cac3dbd0b.jpeg",
     "static/media/real-rumi.jpeg": "/jessie-portfolio/static/media/real-rumi.136a7073781db7acedac.jpeg",
     "static/media/LoveBirds.jpg": "/jessie-portfolio/static/media/LoveBirds.a2fb9127428b2634853a.jpg",
     "static/media/Daschund.JPEG": "/jessie-portfolio/static/media/Daschund.96059a25a5a510720a2c.JPEG",
@@ -27,12 +31,12 @@
     "static/media/Cookie Supply.otf": "/jessie-portfolio/static/media/Cookie Supply.b32875c4316481b51d83.otf",
     "static/media/paper.jpeg": "/jessie-portfolio/static/media/paper.503f1f7a29767324dee9.jpeg",
     "index.html": "/jessie-portfolio/index.html",
-    "main.eaf60b52.css.map": "/jessie-portfolio/static/css/main.eaf60b52.css.map",
-    "main.d4511ddc.js.map": "/jessie-portfolio/static/js/main.d4511ddc.js.map",
+    "main.b8c91d40.css.map": "/jessie-portfolio/static/css/main.b8c91d40.css.map",
+    "main.6f3fb20d.js.map": "/jessie-portfolio/static/js/main.6f3fb20d.js.map",
     "453.b7b64100.chunk.js.map": "/jessie-portfolio/static/js/453.b7b64100.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eaf60b52.css",
-    "static/js/main.d4511ddc.js"
+    "static/css/main.b8c91d40.css",
+    "static/js/main.6f3fb20d.js"
   ]
 }
