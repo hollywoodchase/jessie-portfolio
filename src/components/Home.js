@@ -115,7 +115,7 @@ const Home = () => {
       <div className="contact-form-wrapper">
         <form className="contact-form" onSubmit={sendEmail}>
           <div className="instructions">
-            <h2 className="inst-title">Instructions:</h2>
+            <h2 className="inst-title">Pet Portraits: How can I get one?:</h2>
             <h3 className="instr-text">
             Submit a few photos of the person or animal and any details you'd
             like included in the image, such as plants, toys, etc.
