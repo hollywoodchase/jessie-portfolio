@@ -39,11 +39,12 @@
 
 .nav-link {
   animation: none;
-  padding: 1em;
+  padding: 0.25em;
   text-align: center;
   text-decoration: none;
   color: #c884cd;
   min-width: 15vw;
+  font-size: 1.5em;
 }
 
 .nav-link:hover {
