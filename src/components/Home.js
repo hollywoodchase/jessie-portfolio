@@ -47,14 +47,6 @@ const images = [
     original: cats2,
     thumbnail: cats2,
   },
-  {
-    original: disconap,
-    thumbnail: disconap,
-  },
-  {
-    original: northernlights,
-    thumbnail: northernlights,
-  },
 ];
 
 const Home = () => {
