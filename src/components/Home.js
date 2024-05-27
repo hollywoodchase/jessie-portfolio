@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import "../styles/Home.css";
 import ImageGallery from "react-image-gallery";
 import tovie from "../images/Tovie.JPG";
-import pip from "../images/Pip-1.JPG";
-import rumi from "../images/Rumi.JPG";
+import pip from "../images/combo-pip.jpeg";
+import rumi from "../images/combo-rumi.jpeg";
 import emailjs from "@emailjs/browser";
 import cats2 from "../images/Cats2.jpeg";
-import disconap from "../images/DiscoNap.jpg";
-import northernlights from "../images/NorthernLights.JPG";
-
 import sequoia from "../images/Sequoia.jpg";
-import downwardKitty from "../images/downward-kitty.jpeg";
-import twodogs from "../images/TwoDogs.JPEG";
+import downwardKitty from "../images/combo-downward.jpeg";
+import twodogs from "../images/combo-twodogs.jpeg";
 import daschund from "../images/Daschund.JPEG";
 
 const images = [
