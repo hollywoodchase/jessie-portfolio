@@ -4,7 +4,6 @@ import ImageGallery from "react-image-gallery";
 import tovie from "../images/Tovie.JPG";
 import pip from "../images/combo-pip.jpeg";
 import rumi from "../images/combo-rumi.jpeg";
-import emailjs from "@emailjs/browser";
 import cats2 from "../images/Cats2.jpeg";
 import sequoia from "../images/Sequoia.jpg";
 import downwardKitty from "../images/combo-downward.jpeg";
@@ -50,11 +49,10 @@ const Home = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
 
-  const sendEmail = (e) => {
+  const sendForm = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Construct FormData object to include form data and files
     const formData = new FormData(e.target);
     const files = [
       e.target.attachment1.files[0],
@@ -62,62 +60,56 @@ const Home = () => {
       e.target.attachment3.files[0],
     ];
 
-    // Append each file to the FormData object
     files.forEach((file, index) => {
       if (file) {
-        formData.append(`attachment${index + 1}`, file);
+        formData.append(`attachments`, file);
       }
     });
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        formData,
-        process.env.REACT_APP_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          setStateMessage("Message sent!");
-          setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
-        },
-        (error) => {
-          setStateMessage("Something went wrong, please try again later");
-          setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
-        }
-      );
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.text();
+      setStateMessage(result);
+      setIsSubmitting(false);
+      setTimeout(() => {
+        setStateMessage(null);
+      }, 5000); // hide message after 5 seconds
+    } catch (error) {
+      setStateMessage("Something went wrong, please try again later");
+      setIsSubmitting(false);
+      setTimeout(() => {
+        setStateMessage(null);
+      }, 5000); // hide message after 5 seconds
+    }
 
-    // Clears the form after sending the email
     e.target.reset();
   };
+
   return (
     <div className="home-page">
       <div className="image-viewer">
         <ImageGallery items={images} />
       </div>
       <div className="contact-form-wrapper">
-        <form className="contact-form" onSubmit={sendEmail}>
+        <form className="contact-form" onSubmit={sendForm}>
           <div className="instructions">
             <h2 className="inst-title">Pet Portraits: How can I get one?:</h2>
             <h3 className="instr-text">
-            Submit a few photos of the person or animal and any details you'd
-            like included in the image, such as plants, toys, etc.
+              Submit a few photos of the person or animal and any details you'd
+              like included in the image, such as plants, toys, etc.
             </h3>
           </div>
           <div className="form-input">
             <label>Name</label>
-            <input className="text-input" type="text" name="user_name" />
+            <input className="text-input" type="text" name="name" />
           </div>
           <br />
           <div className="form-input">
             <label>Email</label>
-            <input className="text-input" type="email" name="user_email" />
+            <input className="text-input" type="email" name="email" />
           </div>
           <br />
           <div className="form-input">
