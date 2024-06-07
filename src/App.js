@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
-import HowItWorks from "./components/HowItWorks";
 import ArtGallery from "./components/ArtGallery";
 import About from "./components/About";
 import Misc from "./components/Misc";
@@ -20,7 +19,6 @@ export default class App extends Component {
           <Route path="/jessie-portfolio/shop" element={<Home />} />
           <Route path="/jessie-portfolio/artgallery" element={<ArtGallery />} />
           <Route path="/jessie-portfolio/misc" element={<Misc />} />
-          {/* <Route path="/contact" element={<Contact />} />  */}
         </Routes>
       </div>
     );
