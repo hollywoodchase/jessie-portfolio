@@ -36,7 +36,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // Define the route to handle form submissions
-app.post('/api/contact', upload.fields([
+app.post('/jessie-portfolio/api/contact', upload.fields([
   { name: 'attachment1', maxCount: 1 },
   { name: 'attachment2', maxCount: 1 },
   { name: 'attachment3', maxCount: 1 }
