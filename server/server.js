@@ -37,25 +37,26 @@ const upload = multer({ storage });
 
 // Define the route to handle form submissions
 app.post('/api/contact', upload.fields([
-  { name: 'attachment1', maxCount: 1 },
-  { name: 'attachment2', maxCount: 1 },
-  { name: 'attachment3', maxCount: 1 }
-]), async (req, res) => {
-  const { name, email, message } = req.body;
-  const attachments = [];
+    { name: 'attachment1', maxCount: 1 },
+    { name: 'attachment2', maxCount: 1 },
+    { name: 'attachment3', maxCount: 1 }
+  ]), async (req, res) => {
+    const { name, email, message } = req.body;
+    const attachments = [];
   
-  if (req.files.attachment1) attachments.push(req.files.attachment1[0].path);
-  if (req.files.attachment2) attachments.push(req.files.attachment2[0].path);
-  if (req.files.attachment3) attachments.push(req.files.attachment3[0].path);
-
-  const contact = new Contact({ name, email, message, attachments });
-  try {
-    await contact.save();
-    res.status(200).send('Message saved!');
-  } catch (error) {
-    res.status(500).send('Something went wrong, please try again later');
-  }
-});
+    if (req.files.attachment1) attachments.push(req.files.attachment1[0].path);
+    if (req.files.attachment2) attachments.push(req.files.attachment2[0].path);
+    if (req.files.attachment3) attachments.push(req.files.attachment3[0].path);
+  
+    const contact = new Contact({ name, email, message, attachments });
+    try {
+      await contact.save();
+      res.status(200).send('Message saved!');
+    } catch (error) {
+      res.status(500).send('Something went wrong, please try again later');
+    }
+  });
+  
 
 // Define the port and start the server
 const PORT = process.env.PORT || 5000;
