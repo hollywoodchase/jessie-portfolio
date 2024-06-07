@@ -16,15 +16,18 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Could not connect to MongoDB', err));
 
+// Define the contact schema
 const contactSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  message: String,
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  message: { type: String, required: true },
   attachments: [String]
 });
 
+// Create the Contact model
 const Contact = mongoose.model('Contact', contactSchema);
 
+// Configure multer for file uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, 'uploads/'),
   filename: (req, file, cb) => cb(null, `${Date.now()}-${file.originalname}`)
@@ -32,9 +35,18 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-app.post('/api/contact', upload.array('attachments'), async (req, res) => {
+// Define the route to handle form submissions
+app.post('/api/contact', upload.fields([
+  { name: 'attachment1', maxCount: 1 },
+  { name: 'attachment2', maxCount: 1 },
+  { name: 'attachment3', maxCount: 1 }
+]), async (req, res) => {
   const { name, email, message } = req.body;
-  const attachments = req.files.map(file => file.path);
+  const attachments = [];
+  
+  if (req.files.attachment1) attachments.push(req.files.attachment1[0].path);
+  if (req.files.attachment2) attachments.push(req.files.attachment2[0].path);
+  if (req.files.attachment3) attachments.push(req.files.attachment3[0].path);
 
   const contact = new Contact({ name, email, message, attachments });
   try {
@@ -45,6 +57,7 @@ app.post('/api/contact', upload.array('attachments'), async (req, res) => {
   }
 });
 
+// Define the port and start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
