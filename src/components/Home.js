@@ -11,78 +11,39 @@ import twodogs from "../images/combo-twodogs.jpeg";
 import daschund from "../images/Daschund.JPEG";
 
 const images = [
-  {
-    original: downwardKitty,
-    thumbnail: downwardKitty,
-  },
-  {
-    original: pip,
-    thumbnail: pip,
-  },
-  {
-    original: rumi,
-    thumbnail: rumi,
-  },
-  {
-    original: daschund,
-    thumbnail: daschund,
-  },
-  {
-    original: twodogs,
-    thumbnail: twodogs,
-  },
-  {
-    original: sequoia,
-    thumbnail: sequoia,
-  },
-  {
-    original: tovie,
-    thumbnail: tovie,
-  },
-  {
-    original: cats2,
-    thumbnail: cats2,
-  },
+  { original: downwardKitty, thumbnail: downwardKitty },
+  { original: pip, thumbnail: pip },
+  { original: rumi, thumbnail: rumi },
+  { original: daschund, thumbnail: daschund },
+  { original: twodogs, thumbnail: twodogs },
+  { original: sequoia, thumbnail: sequoia },
+  { original: tovie, thumbnail: tovie },
+  { original: cats2, thumbnail: cats2 },
 ];
 
 const Home = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
 
-  const sendForm = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const formData = new FormData(e.target);
-    const files = [
-      e.target.attachment1.files[0],
-      e.target.attachment2.files[0],
-      e.target.attachment3.files[0],
-    ];
-
-    files.forEach((file, index) => {
-      if (file) {
-        formData.append(`attachments`, file);
-      }
-    });
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
-        body: formData
+        body: formData,
       });
       const result = await response.text();
       setStateMessage(result);
       setIsSubmitting(false);
-      setTimeout(() => {
-        setStateMessage(null);
-      }, 5000); // hide message after 5 seconds
+      setTimeout(() => setStateMessage(null), 5000);
     } catch (error) {
-      setStateMessage("Something went wrong, please try again later");
+      setStateMessage('Something went wrong, please try again later');
       setIsSubmitting(false);
-      setTimeout(() => {
-        setStateMessage(null);
-      }, 5000); // hide message after 5 seconds
+      setTimeout(() => setStateMessage(null), 5000);
     }
 
     e.target.reset();
@@ -94,7 +55,7 @@ const Home = () => {
         <ImageGallery items={images} />
       </div>
       <div className="contact-form-wrapper">
-        <form className="contact-form" onSubmit={sendForm}>
+        <form className="contact-form" onSubmit={handleSubmit}>
           <div className="instructions">
             <h2 className="inst-title">Pet Portraits: How can I get one?:</h2>
             <h3 className="instr-text">
@@ -104,12 +65,12 @@ const Home = () => {
           </div>
           <div className="form-input">
             <label>Name</label>
-            <input className="text-input" type="text" name="name" />
+            <input className="text-input" type="text" name="name" required />
           </div>
           <br />
           <div className="form-input">
             <label>Email</label>
-            <input className="text-input" type="email" name="email" />
+            <input className="text-input" type="email" name="email" required />
           </div>
           <br />
           <div className="form-input">
@@ -129,7 +90,7 @@ const Home = () => {
           <br />
           <div className="form-input">
             <label>Message</label>
-            <textarea className="text-input message-textarea" name="message" />
+            <textarea className="text-input message-textarea" name="message" required />
           </div>
           <br />
           <input
